@@ -1,0 +1,139 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    padding: 20px;
+    background-color: #fff;
+}
+
+h2 {
+    margin-bottom: 10px;
+}
+
+textarea {
+    min-height: 40vh;
+    margin-bottom: 20px;
+
+}
+
+/* MAILBOX VIEW SECTION */
+
+.email-card {
+    /* display: flex; */
+    display: grid;
+    grid-template-columns: min-content 200px 1fr min-content;
+    gap: 20px;
+    background-color: #fafafa;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    border: 1px solid #ddd;
+    transition: 0.1s;
+}
+
+.email-card:hover {
+    text-decoration: none;
+    transform: scale(1.01);
+    border-width: 2px;
+    /* box-shadow: 0 0 3px 3px #00000006; */
+}
+
+.email-card div:last-child {
+    margin-left: auto;
+    padding-right: 20px;
+    color: #999;
+
+}
+
+.card-read-status {
+    display: grid;
+    place-items: center;
+    color: #0470e3;
+    width: 20px;
+    padding-left: 5px;
+    font-size: 0.8rem;
+}
+
+.unread {
+    background-color: #ffffff;
+    border: 1px solid #afcff2;
+    font-weight: bold;
+}
+
+.card-subject {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.card-sender {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.card-timestamp {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+
+/* READ VIEW SECTION */
+
+.email-container {
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+}
+
+.email-header {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+.email-tag {
+    padding: 3px 7px ;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 0.7rem;
+    color: #666
+}
+
+.email-timestamp {
+    color: #999;
+    margin-left: auto;
+}
+
+.email-message-bar {
+    display: flex;
+    gap: 10px;
+}
+.archive-button {
+    margin-left: auto;
+    color: #999;
+    cursor: pointer;
+}
+.archive-button:hover {
+    color:#0a6de7;
+}
+.archive-button svg, .archive-button path {
+    pointer-events: none;
+}
+
+.email-body {
+    padding:10px;
+    border-radius: 5px;
+    color: #333;
+    border: 1px solid #ccc;
+    min-height: 50vh;
+    background-color: #fff;
+    white-space: pre-line;
+}
+
+.email-reply-btn {
+    margin-top: 20px;
+}
